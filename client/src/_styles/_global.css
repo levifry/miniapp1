@@ -1,0 +1,83 @@
+:root {
+  --global-font: 'Poppins', sans-serif;
+  --global-font-weight: 300; /* thin 200, body 300, thick 400, bold 600, black 800 */
+  --global-margin: 1rem;
+  --global-margin-half: 0.5rem;
+  --global-padding: 1rem;
+  --global-padding-half: 0.5rem;
+  --global-border-radius: 1rem;
+  --global-box-shadow-color: #91a3b1;
+
+  --input-padding: 0.5rem 1rem 0.5rem 1rem;
+
+  --font-size-massive: 4rem;
+  --font-size-huge: 3.5rem;
+  --font-size-big: 3rem;
+  --font-size-title: 2.5rem;
+  --font-size-heading: 2rem;
+  --font-size-subheading: 1.5rem;
+  --font-size-body: 1rem;
+  --font-size-small: 0.75rem;
+  --font-size-tiny: 0.5rem;
+
+  --font-color-dm: #d3e0ff;
+  --font-color-lm: #1d2027;
+
+  --color-pri: #4490eb;
+  --color-sec: #A4ABBD;
+  --color-tri: #404756;
+  --color-qua: #E36486;
+  --color-light: #ffffff;
+  --color-light1: #ffffff;
+  --color-light2: #fafaff;
+  --color-light3: #cccccc;
+  --color-dark: #000000;
+  --color-dark1: #111111;
+  --color-dark2: #222222;
+  --color-dark3: #333333;
+}
+
+html {
+  height: 100vh;
+  min-width: 320px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  background: var(--color-light);
+  color: var(--font-color-lm);
+  font-family: var(--global-font);
+  font-weight: var(--global-font-weight);
+}
+
+body {
+  height: 100vh;
+  min-width: 320px;
+  margin: 0;
+}
+
+#root {
+  width: 100%;
+}
+
+/* ::-webkit-scrollbar {
+  display: none;
+} */
+
+.fill {
+  height: 100vh;
+  width: 100vw;
+}
+
+img {
+  border-radius: var(--global-border-radius);
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
