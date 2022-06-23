@@ -18,7 +18,7 @@ Assumptions:
 3. Start the client
     - `npm start`
 ```
-Server will now be running on http://localhost:3000
+Client will now be running on http://localhost:3000
 ```
 
 ### **Server**
