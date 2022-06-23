@@ -8,7 +8,7 @@ Assumptions:
 - Commands assume a Mac terminal (other OS commands may vary)
 ```
 
-# Get the app running in 5 Minutes:
+# Clone the repo, get running in 5 Minutes:
 
 ### **Client**
 1. Enter the client directory
