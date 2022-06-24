@@ -1,27 +1,18 @@
 import styled from "styled-components";
 
-// Usage: <Flex scrolly column wrap center fill></Flex>
-export const Flex = styled.div`
-  display: flex;
-  height: ${(props) =>
-    props.fill ? "100vh" : "fit-content"};
-  width: ${(props) =>
-    props.fill ? "100vw" : "fit-content"};
-  flex-direction: ${(props) =>
-    props.column ? "column" : props.row ? "row" : "row"};
-  flex-wrap: ${(props) => (props.wrap ? "wrap" : "nowrap")};
-  justify-content: ${(props) =>
-    props.centerchildren ? "center" : props.center ? "center" : ""};
-  align-items: ${(props) =>
-    props.centerchildren ? "center" : props.center ? "center" : ""};
-  align-self: ${(props) =>
-    props.center ? "center" : ""};
-  overflow-x: ${(props) =>
-    props.scrollx ? "scroll" : "hidden"};
-  overflow-y: ${(props) =>
-    props.scrolly ? "scroll" : "hidden"};
-  flex-grow: ${(props) =>
-    props.center ? "1" : ""};
+// Usage: <Div flex column stretch wrap center scrolly></Div>
+export const Div = styled.div`
+  display: ${(props) => props.flex ? "flex" : "block"};
+  height: ${(props) => props.stretch ? "100vh" : "fit-content"};
+  width: ${(props) => props.stretch ? "100vw" : "fit-content"};
+  flex-direction: ${(props) => props.column ? "column" : props.row ? "row" : "row"};
+  flex-wrap: ${(props) => props.wrap ? "wrap" : "nowrap"};
+  justify-content: ${(props) => props.centerchildren ? "center" : props.center ? "center" : ""};
+  align-items: ${(props) => props.centerchildren ? "center" : props.center ? "center" : ""};
+  align-self: ${(props) => props.center ? "center" : ""};
+  overflow-x: ${(props) => props.scrollx ? "scroll" : "hidden"};
+  overflow-y: ${(props) => props.scrolly ? "scroll" : "hidden"};
+  flex-grow: ${(props) => props.center ? "1" : ""};
 `;
 
 export const TextInput = styled.input`

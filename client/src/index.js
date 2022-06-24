@@ -7,10 +7,12 @@ import NotFound from './routes/NotFound';
 import './_styles/_global.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+
 root.render(
   <AppProvider>
       <Router fallback={<NotFound />} exceptionElement={<NotFound />}>
-        <App />
+        <App/>
       </Router>
   </AppProvider>
 );

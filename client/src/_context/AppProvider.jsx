@@ -1,7 +1,6 @@
 import { createContext } from 'react'
 
 import useGlobalState from './states/useGlobalState'
-import useApi from './effects/useApi'
 
 const GlobalContext = createContext()
 
@@ -16,9 +15,6 @@ const AppProvider = ({ children }) => {
 
     /* SETTERS */
     setGlobalState,
-
-    /* EFFECTS */
-    useApi
 
   }
 

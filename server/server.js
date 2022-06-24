@@ -43,18 +43,22 @@ server.post("/api/movies", (req, res) => {
     title: req.body.title,
     description: req.body.description,
   }
-  db("movies")
-    .insert({ // TODO: Update this format
-      title: movie.title,
-      description: movie.description,
-    })
-    .returning('id')
-    .then((newMovieId) => {
-      res.status(201).send(`Movie added! Movie ID is: ${newMovieId[0].id}`)
-    })
-    .catch((error) => {
-      res.status(400).send(`Error, movie not added to database.`)
-    })
+  db('movies')
+  .select('*')
+  .insert({ // TODO: Update this format
+    title: movie.title,
+    description: movie.description,
+  })
+  .then(data => {
+    db('movies')
+      .select('*')
+      .then((newMovieId) => {
+        res.status(201).send(newMovieId)
+      })
+  })
+  .catch((error) => {
+    res.status(400).send(`Error, movie not added to database.`)
+  })
 })
 
 server.patch("/api/movies", (req, res) => {

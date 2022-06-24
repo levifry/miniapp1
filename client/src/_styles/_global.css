@@ -81,3 +81,7 @@ img {
   -moz-user-drag: none;
   -o-user-drag: none;
 }
+
+button {
+  margin: 0 8px 0 8px;
+}
